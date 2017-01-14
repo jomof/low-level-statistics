@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/jomof/projects/low-level-statistics/CMakelists.txt
+  CMake does not need to re-run because C:\Users\jomof\projects\low-level-statistics\CMakeFiles\generate.stamp is up-to-date.
+  statistics.c
+  Statistics.vcxproj -> C:\Users\jomof\projects\low-level-statistics\Debug\Statistics.lib
