@@ -1,6 +1,6 @@
 #ifndef JAF_STATISTICS
 #define JAF_STATISTICS
 
-double jaf_sum(double * numbers, size_t size);
+double jaf_sum(double * numbers, int size);
 
 #endif
