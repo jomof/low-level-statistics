@@ -11,7 +11,7 @@ class StatisticsConan(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    exports = ["CMakelists.txt", "FindStatistics.cmake"]
+    exports = ["CMakeLists.txt", "FindStatistics.cmake"]
     url="https://github.com/jomof/low-level-statistics"
     license="https://raw.githubusercontent.com/jomof/low-level-statistics/master/LICENSE"
     description="Very low level C functions for statistics"
