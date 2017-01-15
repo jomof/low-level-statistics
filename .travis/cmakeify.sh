@@ -5,6 +5,7 @@
 
 
 # install a CMake 
+mkdir prebuilts/
 wget --no-check-certificate https://cmake.org/files/dev/cmake-3.7.20161217-g65aad-Linux-x86_64.tar.gz
 tar xvfz cmake-3.7.20161217-g65aad-Linux-x86_64.tar.gz -C prebuilts/
 
