@@ -6,7 +6,7 @@ CMAKEIFY_CMAKE_VERSION=cmake-3.7.20161217-g65aad
 
 # install cross-targeting prereqs
 echo --"$CMAKE_SYSTEM_NAME"--
-if ['Windows' == '$CMAKE_SYSTEM_NAME']; then
+if ["Windows" == $CMAKE_SYSTEM_NAME]; then
   echo --DOWNLOADING--
   wget https://github.com/jomof/cmakeify/releases/download/mingw-w64/mingw-w64-bin_x86_64-linux_20131228.tar.bz2 -O mingw-w64.tar.bz2/download
 fi
