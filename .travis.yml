@@ -5,8 +5,9 @@ env:
   global:
     - CMAKEIFY_ENABLED=1
   matrix:
-    - CMAKEIFY_GCC=4.8
-    - CMAKEIFY_GCC=4.9
+    - CMAKE_SYSTEM_NAME=Linux
+    - CMAKE_SYSTEM_NAME=Windows
+    - CMAKE_SYSTEM_NAME=Darwin
     
 matrix:
    include:
