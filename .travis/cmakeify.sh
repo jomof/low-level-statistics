@@ -26,6 +26,9 @@ prebuilts/cmake/bin/cmake --version
 # build
 mkdir build/
 cd build
-../prebuilts/cmake/bin/cmake ..
+../prebuilts/cmake/bin/cmake .. \
+ -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=bin \
+ -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=bin \
+ -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=bin
 make
-ll
+ls bin/
