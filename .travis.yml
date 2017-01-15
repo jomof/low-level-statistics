@@ -1,9 +1,12 @@
-language: cpp
-compiler:
-  - clang
-  - gcc
+os: linux
+sudo: required
+language: python
+env:
+  global:
+    - CMAKEIFY_ENABLED=1
+  matrix:
+    - CMAKEIFY_GCC=4.8
+    - CMAKEIFY_GCC=4.9
+    
 script:
-  - mkdir build
-  - cd build
-  - cmake .. 
-  - make
+  - ./.travis/cmakeify.sh
