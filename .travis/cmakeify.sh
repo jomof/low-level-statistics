@@ -4,6 +4,12 @@
 
 CMAKEIFY_CMAKE_VERSION=cmake-3.7.20161217-g65aad
 
+# install cross-targeting prereqs
+if ["${CMAKE_SYSTEM_NAME}" == "Windows"]; then
+  wget http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Automated%20Builds/mingw-w64-bin_x86_64-linux_20131228.tar.bz2/download -O mingw-w64.tar.bz2/download
+fi
+
+
 
 
 
@@ -30,6 +36,6 @@ cd build
  -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=bin \
  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=bin \
  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=bin \
- -DCMAKE_SYSTEM_NAME=${CMAKE_SYSTEM_NAME=Linux}
+ -DCMAKE_SYSTEM_NAME=${CMAKE_SYSTEM_NAME}
 make
 ls bin/
