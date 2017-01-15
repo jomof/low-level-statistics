@@ -20,9 +20,9 @@ prebuilts/cmake/bin/cmake --version
 # install cross-targeting prereqs
 case "$CMAKE_SYSTEM_NAME" in
 Windows)
-  echo --DOWNLOADING--
+  mkdir prebuilts/mingw-w64/
   wget https://github.com/jomof/cmakeify/releases/download/mingw-w64/mingw-w64-bin_x86_64-linux_20131228.tar.bz2 -O mingw-w64.tar.bz2
-  tar xvfj mingw-w64.tar.bz2 -C prebuilts/
+  tar xvfj mingw-w64.tar.bz2 -C prebuilts/mingw-w64/
   ;;
 esac
 
