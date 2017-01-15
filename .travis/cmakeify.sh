@@ -11,12 +11,16 @@ CMAKEIFY_CMAKE_VERSION=cmake-3.7.20161217-g65aad
 mkdir prebuilts/
 if [[ "$(uname -s)" == 'Darwin' ]]; then
 wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64.tar.gz -O cmake.tar.gz
-tar xvfz cmake.tar.gz -C prebuilts/
+tar xvfz cmake.tar.gz -C prebuilts/ 
+mv ${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64 cmake
 else
 wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64.tar.gz -O cmake.tar.gz
-tar xvfz cmake.tar.gz -C prebuilts/
+tar xvfz cmake.tar.gz -C prebuilts/ > untar.cmake.out
+mv ${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64 cmake
 fi
+
 prebuilts/cmake/bin/cmake --version
+
 
 
 # build
