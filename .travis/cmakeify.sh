@@ -4,8 +4,8 @@
 
 CMAKEIFY_CMAKE_VERSION=cmake-3.7.20161217-g65aad
 
-CMAKE_C_COMPILER=/bin//usr/bin/cc
-CMAKE_CXX_COMPILER=/bin//usr/bin/c++
+CMAKE_C_COMPILER=/usr/bin/cc
+CMAKE_CXX_COMPILER=/usr/bin/c++
 
 
 
