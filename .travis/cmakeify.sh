@@ -44,7 +44,7 @@ Linux)
 esac
 
 echo Prebuilts
-ls prebuilts/gcc-4.9.0/gcc
+find `pwd` -name 'g++'
 $CMAKE_CXX_COMPILER --version
 
 
