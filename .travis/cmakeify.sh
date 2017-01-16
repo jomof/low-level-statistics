@@ -4,6 +4,11 @@
 
 CMAKEIFY_CMAKE_VERSION=cmake-3.7.20161217-g65aad
 
+CMAKE_C_COMPILER=/bin//usr/bin/cc
+CMAKE_CXX_COMPILER=/bin//usr/bin/c++
+
+
+
 # install a CMake 
 mkdir prebuilts/
 if [[ "$(uname -s)" == 'Darwin' ]]; then
@@ -23,8 +28,8 @@ Windows)
   mkdir prebuilts/mingw-w64
   wget https://github.com/jomof/cmakeify/releases/download/mingw-w64/mingw-w64-bin_x86_64-linux_20131228.tar.bz2 -O mingw-w64.tar.bz2
   tar xvfj mingw-w64.tar.bz2 -C prebuilts/mingw-w64 > untar.mingw-w64.txt
-  CMAKE_CXX_COMPILER=prebuilts/mingw-w64/bin/x86_64-w64-mingw32-g++
-  CMAKE_C_COMPILER=prebuilts/mingw-w64/bin/x86_64-w64-mingw32-gcc
+  CMAKE_CXX_COMPILER=$PWD/prebuilts/mingw-w64/bin/x86_64-w64-mingw32-g++
+  CMAKE_C_COMPILER=$PWD/prebuilts/mingw-w64/bin/x86_64-w64-mingw32-gcc
   ;;
 esac
 
