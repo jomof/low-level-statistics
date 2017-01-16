@@ -35,7 +35,7 @@ esac
 
 echo Prebuilts
 ls prebuilts/
-echo 
+$CMAKE_CXX_COMPILER --version
 
 
 # build
