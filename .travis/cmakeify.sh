@@ -37,14 +37,14 @@ Windows)
   ;;
 Linux)
   wget http://mirrors-usa.go-parts.com/gcc/releases/gcc-${CMAKEIFY_GCC}/gcc-${CMAKEIFY_GCC}.tar.bz2 -O gcc.tar.bz2
-  tar xvfj gcc.tar.bz2 -C prebuilts/ | grep "g\+\+"
-  CMAKE_CXX_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/bin/g++
-  CMAKE_C_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/bin/gcc
+  tar xvfj gcc.tar.bz2 -C prebuilts/ > untar.gcc.txt
+  CMAKE_CXX_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/gcc/bin/g++
+  CMAKE_C_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/gcc/bin/gcc
   ;;
 esac
 
 echo Prebuilts
-ls prebuilts/gcc-4.9.0
+ls prebuilts/gcc-4.9.0/gcc
 $CMAKE_CXX_COMPILER --version
 
 
