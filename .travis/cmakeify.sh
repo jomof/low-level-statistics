@@ -44,7 +44,7 @@ Linux)
 esac
 
 echo Prebuilts
-find `pwd` -name 'g++'
+find `pwd` -name 'gcc'
 $CMAKE_CXX_COMPILER --version
 
 
