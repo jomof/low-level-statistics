@@ -44,7 +44,7 @@ Linux)
 esac
 
 echo Prebuilts
-ls prebuilts/
+ls prebuilts/gcc-4.9.0
 $CMAKE_CXX_COMPILER --version
 
 
