@@ -9,13 +9,13 @@ CMAKE_CXX_COMPILER=/usr/bin/c++
 # install a CMake 
 mkdir prebuilts/
 if [[ "$(uname -s)" == 'Darwin' ]]; then
-wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64.tar.gz -O cmake.tar.gz
-tar xvfz cmake.tar.gz -C prebuilts/ 
-mv ${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64 cmake
+  wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64.tar.gz -O cmake.tar.gz
+  tar xvfz cmake.tar.gz -C prebuilts/ > untar.cmake.txt
+  mv prebuilts/${CMAKEIFY_CMAKE_VERSION}-Darwin-x86_64/CMake.app prebuilts/cmake
 else
-wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64.tar.gz -O cmake.tar.gz
-tar xvfz cmake.tar.gz -C prebuilts/ > untar.cmake.txt
-mv prebuilts/${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64 prebuilts/cmake
+  wget --no-check-certificate https://cmake.org/files/dev/${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64.tar.gz -O cmake.tar.gz
+  tar xvfz cmake.tar.gz -C prebuilts/ > untar.cmake.txt
+  mv prebuilts/${CMAKEIFY_CMAKE_VERSION}-Linux-x86_64 prebuilts/cmake
 fi
 prebuilts/cmake/bin/cmake --version
 
@@ -37,7 +37,7 @@ Windows)
   ;;
 Linux)
   wget http://mirrors-usa.go-parts.com/gcc/releases/gcc-${CMAKEIFY_GCC}/gcc-${CMAKEIFY_GCC}.tar.bz2 -O gcc.tar.bz2
-  tar xvfj gcc.tar.bz2 > untar.gcc.txt
+  tar xvfj gcc.tar.bz2 -C prebuilts/ > untar.gcc.txt
   CMAKE_CXX_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/bin/g++
   CMAKE_C_COMPILER=$PWD/prebuilts/gcc-${CMAKEIFY_GCC}/bin/gcc
   ;;
