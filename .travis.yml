@@ -1,4 +1,4 @@
 sudo: true
 script:
  - ./cmakeify
- - ./build.sh
+ - .cmakeify/build.sh
