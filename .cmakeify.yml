@@ -1,1 +1,1 @@
-target: [linux, android]
+targets: [linux, android]
