@@ -1,22 +1,19 @@
-sudo: true
-script:
- - ./cmakeify
- cache: 
+addons: 
+  apt: 
+    packages: 
+      - gcc-6
+      - g++-6
+      - gcc-5
+      - g++-5
+      - gcc-4.9
+      - g++-4.9
+      - clang-3.6
+    sources: 
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.6
+cache: 
   directories: 
     - .cmakeify
     - ~/.gradle
- addons:
-  apt:
-    sources:
-    # add PPAs with more up-to-date toolchains
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise-3.6
-    packages:
-    # install toolchains
-    - gcc-6
-    - g++-6
-    - gcc-5
-    - g++-5
-    - gcc-4.9
-    - g++-4.9
-    - clang-3.6
+script: 
+  - ./cmakeify
