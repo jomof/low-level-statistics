@@ -1,2 +1,1 @@
-# Linux for unittest purpose
 targets: [linux, android]
