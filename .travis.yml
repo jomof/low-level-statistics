@@ -17,7 +17,9 @@ deploy:
   true: 
     tags: true
   file: 
-    - build/build/cdep-manifest.yml
-    - build/build/low-level-statistics-android-cxx_shared.zip
-    - build/build/low-level-statistics-android-cxx_static.zip
+    - ./build/build/cdep-manifest.yml
+    - build/build/low-level-statistics-android-cxx_shared-platform-9.zip
     - build/build/low-level-statistics-linux.zip
+    - build/build/low-level-statistics-android-cxx_shared-platform-21.zip
+    - build/build/low-level-statistics-android-cxx_static-platform-9.zip
+    - build/build/low-level-statistics-android-cxx_static-platform-21.zip
