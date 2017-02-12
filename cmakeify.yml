@@ -1,5 +1,6 @@
 targets: [linux, android]
 android:
+  lib: libstatistics.a
   ndk:
     platforms: [9, 21]
     
