@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.1)
 project (Statistics)
 set (CMAKE_C_STANDARD 99)
-add_library(Statistics STATIC statistics.c)
+add_library(statistics STATIC statistics.c)
 file(COPY statistics.h DESTINATION ${CMAKEIFY_REDIST_INCLUDE_DIRECTORY})
