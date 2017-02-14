@@ -3,3 +3,5 @@
 
 
 # CDep packaging for low-level-statistics
+
+An example CDep packaging project that runs on Travis with CMakeify.
