@@ -8,17 +8,4 @@ addons:
     - ubuntu-toolchain-r-test
     - llvm-toolchain-precise-3.6
 script:
-- ./cmakeify  --version
 - ./cmakeify  --group-id com.github.jomof --artifact-id low-level-statistics --target-version ${TRAVIS_TAG}
-deploy:
-  provider: releases
-  api_key:
-    secure: IDooEdsM+lQsioyYBkReDs9U+tR2+H/U09Hw9eQnZLlbO8iC6QiN/PaDj462B/Grvt/Qk2eXINKgqhPkFvDYDgXr2bcD4ui8vpv/ZMZGX6jrzXdzuEk/7PAw8bBw/ZWMcIQVmOH99odfVG4hBB8AbQ6cfxdFzALadW0yb9K0INfLuN8e8zHpvFCmntuirq83Z9zB7zb/TGXnA9rY3LWqKtiVKw5X33TEIW3kW1o5TyNhjHK2UAoQuv9aXD1hmLhgUhB8soPQrW8+BkrPsu/WzKICr9YfXkkR4c1ghdhlL6ax/R1Oxa2sCVsVHmZJB+FmPciGu/f7i2RNxC/M2u+5YnErjThR9qq6cawlFY42IARoDkk4y+Isrh34c+u5jSw3WeHFa9mCCbGbLjUu9tf/bw0d9wyMHMX0IcAhtjIsSTjPCI+X951847etsmROI8FlMfZRU/CeQVrQvNCOZoSpJqbhOtDIe4N0fbRaig3eua1gLm0cKsfYuEvnEvZ1tsJ3LWHjGcT1FGIB/NK3Xcssb6AGt5UDw8INcimbv58yCYCQLhFG0RDqbmR6GOHVuFrF/8GycCkzZ8d3/l4S8Zgmd9TwsI0k0wRzFdIwmSFDXbjIJS/IAObDi+ROFjJvLQ5f+CNN+DVH676CNcaXMNk9dFa3dOTWVBm3Oab04JI3Hvk=
-  skip_cleanup: true
-  true: 
-    tags: true
-  file: 
-    - build/zips/cdep-manifest.yml
-    - build/zips/low-level-statistics-linux.zip
-    - build/zips/low-level-statistics-android-platform-9.zip
-    - build/zips/low-level-statistics-android-platform-21.zip
