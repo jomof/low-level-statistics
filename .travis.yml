@@ -8,4 +8,5 @@ addons:
     - ubuntu-toolchain-r-test
     - llvm-toolchain-precise-3.6
 script:
+- ./cdep --version
 - ./cmakeify  --group-id com.github.jomof --artifact-id low-level-statistics --target-version ${TRAVIS_TAG}
